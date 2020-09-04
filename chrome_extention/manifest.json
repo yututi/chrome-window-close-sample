@@ -1,0 +1,18 @@
+{
+    "name": "Close Wingow Example",
+    "version": "1",
+    "description": "何かしらのメッセージを受け取ると、Chromeウィンドウを閉じる。",
+    "permissions": ["tabs", "activeTab"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+    },
+    "content_scripts": [
+        {
+          "matches": ["http://localhost/*", "http://localhost:8080/*", "file:///*"],
+          "js": ["contentScript.js"],
+          "run_at": "document_idle"
+        }
+      ],
+    "manifest_version": 2
+}

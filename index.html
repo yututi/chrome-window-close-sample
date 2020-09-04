@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<script>
+			
+			function foo() {
+				window.postMessage({ type: "FROM_PAGE", text: "Hello from the webpage!" }, "*");
+			}
+			function bar() {
+				window.close();
+			}
+		</script>
+	</head>
+
+	<body>
+		<button onclick="foo()">chromeŠg’£‚©‚ç•Â‚¶‚é</button>
+		<button onclick="bar()">window.close</button>
+	</body>
+</html>
